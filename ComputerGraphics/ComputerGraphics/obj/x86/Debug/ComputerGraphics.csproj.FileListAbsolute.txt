@@ -1,0 +1,17 @@
+c:\users\alonsogr\documents\visual studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\ComputerGraphics.exe.config
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\ComputerGraphics.exe
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\ComputerGraphics.pdb
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\SharpGL.dll
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\SharpGL.WPF.dll
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\SharpGL.pdb
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\bin\Debug\SharpGL.WPF.pdb
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.csprojResolveAssemblyReference.cache
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\MainWindow.baml
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\MainWindow.g.cs
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\App.g.cs
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics_MarkupCompile.cache
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.g.resources
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.Properties.Resources.resources
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.csproj.GenerateResource.Cache
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.exe
+C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.pdb
