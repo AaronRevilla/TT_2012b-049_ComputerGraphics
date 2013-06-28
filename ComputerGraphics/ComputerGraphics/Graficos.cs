@@ -62,6 +62,39 @@ namespace ComputerGraphics
             return group;
         }
 
+        private Model3DGroup CreatePolygonModel(Point3D[] points)
+        {
+            MeshGeometry3D mesh = new MeshGeometry3D();
+            int indexPoints = 1;
+            int totalPoints = points.Count();
+
+            for (indexPoints = 1; indexPoints <= totalPoints; indexPoints++)
+            {
+                mesh.Positions.Add(points.ElementAt(indexPoints));
+            }
+            
+            //Solo se necesitan tres puntos para poder saber la cara del triangulo
+            for (int i = 0; i < 3; i++)
+            {
+                mesh.TriangleIndices.Add(i);
+            }
+
+            //Para obtener el vector normal solo se necesitan tres puntos del plano
+            Vector3D normal = CalculateNormal(points.ElementAt(0), points.ElementAt(1), points.ElementAt(2));
+
+            //¿Checar por que se agrega 3 veces la normal?
+            //for (int i = 0; i < 3; i++)
+            //{
+                mesh.Normals.Add(normal);
+            //}
+
+            Material material = new DiffuseMaterial(new SolidColorBrush(Colors.DarkCyan));
+            GeometryModel3D model = new GeometryModel3D(mesh, material);
+            Model3DGroup group = new Model3DGroup();
+            group.Children.Add(model);
+            return group;
+        }
+
 
         private Vector3D CalculateNormal(Point3D p0, Point3D p1, Point3D p2)
         {

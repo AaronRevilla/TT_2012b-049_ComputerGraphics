@@ -18,6 +18,8 @@ namespace ComputerGraphics
     /// </summary>
     public partial class DrawLines : Window
     {
+
+        LeerArchivo archivo = null;
         public DrawLines()
         {
             InitializeComponent();
@@ -31,6 +33,31 @@ namespace ComputerGraphics
             nombreArchivo.Text = ofd.FileName;
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            archivo = new LeerArchivo(nombreArchivo.Text);
+            cajaTexto.Text = archivo.getAllDocument();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            cajaTexto.Text = "";
+            nombreArchivo.Text = "";
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            string textoLinea = archivo.getLine(Convert.ToInt32(numLinea.Text));
+            if (textoLinea != null)
+            {
+                cajaTexto.Text = textoLinea;
+            }
+            else 
+            {
+                cajaTexto.Text = "Linea no encontrada";
+            }
+            
+        }
+
     }
 }

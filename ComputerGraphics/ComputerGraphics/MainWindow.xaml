@@ -65,12 +65,24 @@
                 <ModelVisual3D>
                     <ModelVisual3D.Content>
                         <DirectionalLight 
-	    Color="White" 
-	    Direction="-2,-3,-1" />
+	    Color="White"  
+	    Direction="-2,-3,-1" >
+                            <DirectionalLight.Transform>
+                                <Transform3DGroup>
+                                    <TranslateTransform3D OffsetZ="0" OffsetX="0" OffsetY="0"/>
+                                    <ScaleTransform3D ScaleZ="1" ScaleY="1" ScaleX="1"/>
+                                    <RotateTransform3D>
+                                        <RotateTransform3D.Rotation>
+                                            <AxisAngleRotation3D Axis="0,1,0" Angle="0"/>
+                                        </RotateTransform3D.Rotation>
+                                    </RotateTransform3D>
+                                    <TranslateTransform3D OffsetZ="0" OffsetX="0" OffsetY="0"/>
+                                    <TranslateTransform3D OffsetZ="0" OffsetX="0" OffsetY="0"/>
+                                </Transform3DGroup>
+                            </DirectionalLight.Transform>
+                        </DirectionalLight>
                     </ModelVisual3D.Content>
-                </ModelVisual3D>
-                
-                
+                </ModelVisual3D>  
             </Viewport3D>
         </DockPanel>
     </Grid>

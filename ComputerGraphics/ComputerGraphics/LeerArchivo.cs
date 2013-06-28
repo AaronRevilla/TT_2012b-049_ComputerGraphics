@@ -13,14 +13,19 @@ namespace ComputerGraphics
         public LeerArchivo(string r)
         {
             rutaArchivo = r;
-            Console.WriteLine(this.rutaArchivo);
         }
 
         public string getLine(int line)
         {
-            Console.WriteLine(rutaArchivo);
             string[] lines = File.ReadAllLines(rutaArchivo);
-            return lines[line - 1];
+            if (line <= lines.Count() && line > 0)
+            {
+                return lines[line - 1];
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public string[] getLines()
@@ -31,6 +36,11 @@ namespace ComputerGraphics
         public string getAllDocument()
         {
             return File.ReadAllText(rutaArchivo);
+        }
+
+        public int numLines()
+        {
+            return File.ReadAllLines(rutaArchivo).Count();
         }
 
     }
