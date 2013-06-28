@@ -15,3 +15,20 @@ C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\Compute
 C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.csproj.GenerateResource.Cache
 C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.exe
 C:\Users\AlonsoGR\Documents\Visual Studio 2010\Projects\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.pdb
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\bin\Debug\ComputerGraphics.exe.config
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.exe
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.pdb
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\bin\Debug\ComputerGraphics.exe
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\bin\Debug\ComputerGraphics.pdb
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\bin\Debug\SharpGL.pdb
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\bin\Debug\SharpGL.WPF.pdb
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.csprojResolveAssemblyReference.cache
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\DrawLines.baml
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\MainWindow.baml
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\DrawLines.g.cs
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\App.g.cs
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics_MarkupCompile.cache
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.g.resources
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.Properties.Resources.resources
+C:\Users\Aarón\Documents\Desarrollo\TT_2012b-049_ComputerGraphics\ComputerGraphics\ComputerGraphics\obj\x86\Debug\ComputerGraphics.csproj.GenerateResource.Cache
