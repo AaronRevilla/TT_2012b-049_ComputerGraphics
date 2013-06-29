@@ -36,7 +36,7 @@ namespace ComputerGraphics
             return null;
         }
 
-        private Model3DGroup CreateTriangleModel(Point3D p0, Point3D p1, Point3D p2)
+        public Model3DGroup CreateTriangleModel(Point3D p0, Point3D p1, Point3D p2)
         {
             MeshGeometry3D mesh = new MeshGeometry3D();
             mesh.Positions.Add(p0);
@@ -62,7 +62,7 @@ namespace ComputerGraphics
             return group;
         }
 
-        private Model3DGroup CreatePolygonModel(Point3D[] points)
+        public Model3DGroup CreatePolygonModel(Point3D[] points)
         {
             MeshGeometry3D mesh = new MeshGeometry3D();
             int indexPoints = 1;

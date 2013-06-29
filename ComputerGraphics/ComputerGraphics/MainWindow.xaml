@@ -24,7 +24,7 @@
                 <StackPanel Margin="10">
                     <Button Name="cameraButton"  Height="22" Width="102" Click="cameraButton_Click">Camara</Button>
                 </StackPanel>
-                <Separator Height="5" Name="separator1" Width="120" />
+                <Separator Height="5" x:Name="separator1" Width="120" />
                 <TextBlock Text="Camera X Position:"/>
                 <TextBox Name="cameraPositionXTextBox" MaxLength="5" 
    HorizontalAlignment="Left" Text="9" Width="110" />
@@ -45,6 +45,7 @@
                 <TextBox Name="lookAtZTextBox" MaxLength="5" 
    HorizontalAlignment="Left" Text="-10" Width="106" />
                 <Separator/>
+                <Button Content="Blender" Height="25" Width="66" Click="Button_Click"/>
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0" />
@@ -82,7 +83,7 @@
                             </DirectionalLight.Transform>
                         </DirectionalLight>
                     </ModelVisual3D.Content>
-                </ModelVisual3D>  
+                </ModelVisual3D>
             </Viewport3D>
         </DockPanel>
     </Grid>

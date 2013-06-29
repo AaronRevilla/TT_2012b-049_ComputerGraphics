@@ -60,7 +60,7 @@ namespace ComputerGraphics
 
         private void cubeButtonClick(object sender, RoutedEventArgs e)
         {
-            Model3DGroup cube = new Model3DGroup();
+            //Model3DGroup cube = new Model3DGroup();
 
             puntos[0] = new Point3D(0, 0, 0);
             puntos[1] = new Point3D(5, 0, 0);
@@ -343,6 +343,52 @@ namespace ComputerGraphics
             
            
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Model3DGroup caras = new Model3DGroup();
+            LeerArchivo archivo = null;
+            int numCaras = 0;
+            int numPuntos = 0;
+      
+            var ofd = new Microsoft.Win32.OpenFileDialog();
+            var result = ofd.ShowDialog();
+            if (result == false) return;
+            
+            archivo = new LeerArchivo(ofd.FileName);
+            numCaras = archivo.numLines();
+
+            for (int indiceLinea = 0; indiceLinea < numCaras; indiceLinea++)
+            {
+                string[] puntosCadena = archivo.getLine(indiceLinea + 1).Split(' ');
+                numPuntos = puntosCadena.Count() / 3;
+                //Verificacion de que las coordenadas vengan en tercias
+                if (puntosCadena.Count() % 3 == 0)
+                {
+                    Point3D[] puntosArchvivo = new Point3D[numPuntos];
+                    int i = 0;
+
+                    for (int indicePunto = 0; indicePunto < numPuntos; indicePunto++)
+                    {
+                        double x = Convert.ToDouble(puntosCadena.ElementAt(i++));
+                        double y = Convert.ToDouble(puntosCadena.ElementAt(i++));
+                        double z = Convert.ToDouble(puntosCadena.ElementAt(i++));
+                        puntosArchvivo[indicePunto] = new Point3D(x, y, z);
+                    }
+                    caras.Children.Add(graficos.CreatePolygonModel(puntosArchvivo));
+                }
+                else
+                {
+                    //no se puede hacer cara
+                }
+            }
+            model = new ModelVisual3D();
+            model.Content = caras;
+            if (model != null)
+            {
+                this.mainViewport.Children.Add(model);
+            }
+       }
     }
 }
 
