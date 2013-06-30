@@ -362,6 +362,7 @@ namespace ComputerGraphics
             {
                 string[] puntosCadena = archivo.getLine(indiceLinea + 1).Split(' ');
                 numPuntos = puntosCadena.Count() / 3;
+                Consola.Text = Consola.Text + numPuntos + "------" + indiceLinea + '\n';
                 //Verificacion de que las coordenadas vengan en tercias
                 if (puntosCadena.Count() % 3 == 0)
                 {
@@ -374,6 +375,7 @@ namespace ComputerGraphics
                         double y = Convert.ToDouble(puntosCadena.ElementAt(i++));
                         double z = Convert.ToDouble(puntosCadena.ElementAt(i++));
                         puntosArchvivo[indicePunto] = new Point3D(x, y, z);
+                        Consola.Text = Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n';
                     }
                     caras.Children.Add(graficos.CreatePolygonModel(puntosArchvivo));
                 }
