@@ -65,10 +65,10 @@ namespace ComputerGraphics
         public Model3DGroup CreatePolygonModel(Point3D[] points)
         {
             MeshGeometry3D mesh = new MeshGeometry3D();
-            int indexPoints = 1;
+            int indexPoints = 0;
             int totalPoints = points.Count();
 
-            for (indexPoints = 1; indexPoints <= totalPoints; indexPoints++)
+            for (indexPoints = 0; indexPoints < totalPoints; indexPoints++)
             {
                 mesh.Positions.Add(points.ElementAt(indexPoints));
             }

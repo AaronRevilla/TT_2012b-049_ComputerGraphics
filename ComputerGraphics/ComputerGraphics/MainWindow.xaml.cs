@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Media3D;
+using System.Threading;
+using System.Windows.Threading;
 
 namespace ComputerGraphics
 {
@@ -23,7 +25,9 @@ namespace ComputerGraphics
         ModelVisual3D model;
         Graficos graficos;
         Point3D[] puntos = new Point3D[8];
+        Thread hiloBlender = null;
         int x, y, z;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -346,15 +350,23 @@ namespace ComputerGraphics
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            hiloBlender = new Thread(new ThreadStart(this.graficaBlender));
+            // Start the thread
+            hiloBlender.Start();
+            //graficaBlender();
+        }
+
+        public void graficaBlender()
+        {
             Model3DGroup caras = new Model3DGroup();
             LeerArchivo archivo = null;
             int numCaras = 0;
             int numPuntos = 0;
-      
+
             var ofd = new Microsoft.Win32.OpenFileDialog();
             var result = ofd.ShowDialog();
             if (result == false) return;
-            
+
             archivo = new LeerArchivo(ofd.FileName);
             numCaras = archivo.numLines();
 
@@ -362,9 +374,13 @@ namespace ComputerGraphics
             {
                 string[] puntosCadena = archivo.getLine(indiceLinea + 1).Split(' ');
                 numPuntos = puntosCadena.Count() / 3;
-                Consola.Text = Consola.Text + numPuntos + "------" + indiceLinea + '\n';
+
+                Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Consola.Text = this.Consola.Text + numPuntos + "------" + indiceLinea + '\n'));
+                //System.Windows.Threading.DispatcherPriority.Normal,new Action<string>(Consola.Text),Consola.Text + numPuntos + "------" + indiceLinea + '\n');
+                
+                //Consola.Text + numPuntos + "------" + indiceLinea + '\n';
                 //Verificacion de que las coordenadas vengan en tercias
-                if (puntosCadena.Count() % 3 == 0)
+                if ((numPuntos % 3) == 0)
                 {
                     Point3D[] puntosArchvivo = new Point3D[numPuntos];
                     int i = 0;
@@ -375,14 +391,18 @@ namespace ComputerGraphics
                         double y = Convert.ToDouble(puntosCadena.ElementAt(i++));
                         double z = Convert.ToDouble(puntosCadena.ElementAt(i++));
                         puntosArchvivo[indicePunto] = new Point3D(x, y, z);
-                        Consola.Text = Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n';
+                        Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Consola.Text = Consola.Text = this.Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n'));
+                        //Consola.Text = Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n';
                     }
                     caras.Children.Add(graficos.CreatePolygonModel(puntosArchvivo));
                 }
                 else
                 {
-                    //no se puede hacer cara
+                    Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Consola.Text = this.Consola.Text + "No entro" + '\n'));
+                    //Consola.Text = Consola.Text + "No entro" + '\n';
                 }
+                Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Progreso.Value = (indiceLinea * 100) / numCaras));
+                //Progreso.Value = (indiceLinea * 100) / numCaras;
             }
             model = new ModelVisual3D();
             model.Content = caras;
@@ -390,7 +410,8 @@ namespace ComputerGraphics
             {
                 this.mainViewport.Children.Add(model);
             }
-       }
+        }
+
     }
 }
 
