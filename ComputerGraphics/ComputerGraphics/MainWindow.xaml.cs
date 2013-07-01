@@ -87,10 +87,11 @@ namespace ComputerGraphics
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
-            Transform3DGroup transform3DGroup = new Transform3DGroup();
+            //Transform3DGroup transform3DGroup = new Transform3DGroup();      
+
             if (e.Key == Key.W)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].Y = puntos[i].Y + 1;
                 }
@@ -101,7 +102,7 @@ namespace ComputerGraphics
             }
             if (e.Key == Key.S)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].Y = puntos[i].Y - 1;
                 }
@@ -113,7 +114,7 @@ namespace ComputerGraphics
             if (e.Key == Key.D)
             {
 
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].X = puntos[i].X + 1;
                 }
@@ -124,7 +125,7 @@ namespace ComputerGraphics
             }
             if (e.Key == Key.A)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].X = puntos[i].X - 1;
                 }
@@ -135,7 +136,7 @@ namespace ComputerGraphics
             }
             if (e.Key == Key.Add)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].Z = puntos[i].Z + 1;
                 }
@@ -147,7 +148,7 @@ namespace ComputerGraphics
             }
             if (e.Key == Key.Subtract)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].Z = puntos[i].Z - 1;
                 }
@@ -159,7 +160,7 @@ namespace ComputerGraphics
 
             if (e.Key == Key.M)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].X = puntos[i].X * (1.1);
                     puntos[i].Y = puntos[i].Y * (1.1);
@@ -172,7 +173,7 @@ namespace ComputerGraphics
             }
             if (e.Key == Key.N)
             {
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     puntos[i].X = puntos[i].X * (.9);
                     puntos[i].Y = puntos[i].Y * (.9);
@@ -186,7 +187,7 @@ namespace ComputerGraphics
             if (e.Key == Key.U)
             {
                 Point3D prota = new Point3D();
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
 
                     prota.X = (puntos[i].X) * (Math.Cos((10 * Math.PI) / 180)) - (puntos[i].Y) * (Math.Sin((10 * Math.PI) / 180));
@@ -205,7 +206,7 @@ namespace ComputerGraphics
             if (e.Key == Key.O)
             {
                 Point3D prota = new Point3D();
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     prota.X = (puntos[i].X) * (Math.Cos((-10 * Math.PI) / 180)) - (puntos[i].Y) * (Math.Sin((-10 * Math.PI) / 180));
                     prota.Y = (puntos[i].X) * (Math.Sin((-10 * Math.PI) / 180)) + (puntos[i].Y) * (Math.Cos((-10 * Math.PI) / 180));
@@ -224,7 +225,7 @@ namespace ComputerGraphics
             if (e.Key == Key.I)
             {
                 Point3D prota = new Point3D();
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     prota.Y = (puntos[i].Y) * (Math.Cos((-10 * Math.PI) / 180)) - (puntos[i].Z) * (Math.Sin((-10 * Math.PI) / 180));
                     prota.Z = (puntos[i].Y) * (Math.Sin((-10 * Math.PI) / 180)) + (puntos[i].Z) * (Math.Cos((-10 * Math.PI) / 180));
@@ -246,7 +247,7 @@ namespace ComputerGraphics
             if (e.Key == Key.K)
             {
                 Point3D prota = new Point3D();
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     prota.Y = (puntos[i].Y) * (Math.Cos((10 * Math.PI) / 180)) - (puntos[i].Z) * (Math.Sin((10 * Math.PI) / 180));
                     prota.Z = (puntos[i].Y) * (Math.Sin((10 * Math.PI) / 180)) + (puntos[i].Z) * (Math.Cos((10 * Math.PI) / 180));
@@ -265,7 +266,7 @@ namespace ComputerGraphics
             if (e.Key == Key.J)
             {
                 Point3D prota = new Point3D();
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     prota.Z = (puntos[i].Z) * (Math.Cos((-10 * Math.PI) / 180)) - (puntos[i].X) * (Math.Sin((-10 * Math.PI) / 180));
                     prota.X = (puntos[i].Z) * (Math.Sin((-10 * Math.PI) / 180)) + (puntos[i].X) * (Math.Cos((-10 * Math.PI) / 180));
@@ -284,7 +285,7 @@ namespace ComputerGraphics
             if (e.Key == Key.L)
             {
                 Point3D prota = new Point3D();
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < puntos.Count(); i++)
                 {
                     prota.Z = (puntos[i].Z) * (Math.Cos((10 * Math.PI) / 180)) - (puntos[i].X) * (Math.Sin((10 * Math.PI) / 180));
                     prota.X = (puntos[i].Z) * (Math.Sin((10 * Math.PI) / 180)) + (puntos[i].X) * (Math.Cos((10 * Math.PI) / 180));
@@ -306,7 +307,7 @@ namespace ComputerGraphics
         private void mainViewport_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Point3D prota = new Point3D();
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < puntos.Count(); i++)
             {
                 prota.Z = (puntos[i].Z) * (Math.Cos((10 * Math.PI) / 180)) - (puntos[i].X) * (Math.Sin((10 * Math.PI) / 180));
                 prota.X = (puntos[i].Z) * (Math.Sin((10 * Math.PI) / 180)) + (puntos[i].X) * (Math.Cos((10 * Math.PI) / 180));
@@ -350,16 +351,18 @@ namespace ComputerGraphics
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            hiloBlender = new Thread(new ThreadStart(this.graficaBlender));
+            //hiloBlender = new Thread(new ThreadStart(this.graficaBlender(this.mainViewport)));
+            //hiloBlender = new Thread(() => this.graficaBlender(this.mainViewport));
             // Start the thread
-            hiloBlender.Start();
-            //graficaBlender();
+            //hiloBlender.Start();
+            graficaBlender();
         }
 
         public void graficaBlender()
         {
             Model3DGroup caras = new Model3DGroup();
             LeerArchivo archivo = null;
+            Point3D[] puntosArchvivo = null;
             int numCaras = 0;
             int numPuntos = 0;
 
@@ -375,14 +378,12 @@ namespace ComputerGraphics
                 string[] puntosCadena = archivo.getLine(indiceLinea + 1).Split(' ');
                 numPuntos = puntosCadena.Count() / 3;
 
-                Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Consola.Text = this.Consola.Text + numPuntos + "------" + indiceLinea + '\n'));
-                //System.Windows.Threading.DispatcherPriority.Normal,new Action<string>(Consola.Text),Consola.Text + numPuntos + "------" + indiceLinea + '\n');
-                
-                //Consola.Text + numPuntos + "------" + indiceLinea + '\n';
+                //Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = this.Consola.Text + numPuntos + "------" + indiceLinea + " de " + numCaras + '\n'));              
+            
                 //Verificacion de que las coordenadas vengan en tercias
                 if ((numPuntos % 3) == 0)
                 {
-                    Point3D[] puntosArchvivo = new Point3D[numPuntos];
+                    puntosArchvivo = new Point3D[numPuntos];
                     int i = 0;
 
                     for (int indicePunto = 0; indicePunto < numPuntos; indicePunto++)
@@ -391,24 +392,39 @@ namespace ComputerGraphics
                         double y = Convert.ToDouble(puntosCadena.ElementAt(i++));
                         double z = Convert.ToDouble(puntosCadena.ElementAt(i++));
                         puntosArchvivo[indicePunto] = new Point3D(x, y, z);
-                        Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Consola.Text = Consola.Text = this.Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n'));
-                        //Consola.Text = Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n';
+                        //Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = Consola.Text = this.Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n'));
                     }
                     caras.Children.Add(graficos.CreatePolygonModel(puntosArchvivo));
                 }
                 else
                 {
-                    Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Consola.Text = this.Consola.Text + "No entro" + '\n'));
-                    //Consola.Text = Consola.Text + "No entro" + '\n';
+                    Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = this.Consola.Text + "No entro" + '\n'));
                 }
-                Dispatcher.Invoke(DispatcherPriority.Background, new Action(() => this.Progreso.Value = (indiceLinea * 100) / numCaras));
-                //Progreso.Value = (indiceLinea * 100) / numCaras;
+                Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Progreso.Value = (indiceLinea * 100) / numCaras));
             }
             model = new ModelVisual3D();
             model.Content = caras;
             if (model != null)
             {
+                /*if (!Application.Current.Dispatcher.CheckAccess())
+                {
+                    Application.Current.Dispatcher.Invoke(new MyFunctionDelegate(MyFunction));
+                    return; // Important to leave the culprit thread
+                }*/
+                //Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.mainViewport.Children.Add(model)));
+                //addChildrenViwePort(model);
                 this.mainViewport.Children.Add(model);
+
+            }
+        }
+
+        //se agrego metodo para agregar hijos a el objeto viewport ya que desde un proceso diferente al principal no es posible hacerlo.
+        public void addChildrenViwePort(ModelVisual3D visualModel)
+        {
+            if (visualModel != null)
+            {
+                this.mainViewport.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal,
+        new Action(delegate() { this.mainViewport.Children.Add(visualModel); })); //update GUI from this thread
             }
         }
 
