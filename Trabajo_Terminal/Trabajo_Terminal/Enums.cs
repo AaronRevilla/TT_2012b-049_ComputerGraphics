@@ -19,10 +19,5 @@ namespace GraphicNotes
             Video
 
         }
-
-        public enum Borrar
-        {
-            A=0
-        }
     }
 }
