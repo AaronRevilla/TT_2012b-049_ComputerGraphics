@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:w="clr-namespace:GraphicNotes.Workspace"
+                    xmlns:a="clr-namespace:GraphicNotes"
+                    >
+                    
+    <w:Toolbox x:Key="ToolboxCollection"
+               DefaultItemSize="70,72" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <ItemsControl.Items>
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Figure3D}"
+                             Type="Figure3D" 
+                             Source="/GraphicNotes;component/Images/figure.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Line}" 
+                             Type="Line"
+                             Source="/GraphicNotes;component/Images/line.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Picture}"  
+                             Type="Picture" 
+                             Source="/GraphicNotes;component/Images/picture.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Plot}"  
+                             Type="Plot" 
+                             Source="/GraphicNotes;component/Images/plot.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Polygon}"  
+                             Type="Polygon" 
+                             Source="/GraphicNotes;component/Images/polygon.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Table}"  
+                             Type="Table" 
+                             Source="/GraphicNotes;component/Images/table.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Text}"  
+                             Type="Text" 
+                             Source="/GraphicNotes;component/Images/text.png" />
+            <w:ToolboxObject Style="{StaticResource ToolboxObjectStyle}" 
+                             Text="{DynamicResource Video}"  
+                             Type="Video" 
+                             Source="/GraphicNotes;component/Images/video.png" />
+        </ItemsControl.Items>
+    </w:Toolbox>
+</ResourceDictionary>

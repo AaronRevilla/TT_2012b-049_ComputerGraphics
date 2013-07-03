@@ -1,0 +1,17 @@
+﻿<Application x:Class="GraphicNotes.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/BaseObject.xaml"/>
+                <ResourceDictionary Source="Resources/TextObject.xaml"/>
+                <ResourceDictionary Source="Resources/Toolbox.xaml"/>
+                <ResourceDictionary Source="Resources/DocumentPanel.xaml"/>
+                <ResourceDictionary Source="Collections/ToolboxCollection.xaml"/>
+                <ResourceDictionary Source="Languages/StringResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

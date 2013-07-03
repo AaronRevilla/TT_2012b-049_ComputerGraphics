@@ -1,0 +1,100 @@
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\MainWindow.baml
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\App.g.cs
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\Objects\Views\ObjectBar.baml
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\Objects\Views\ObjectBar.g.cs
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes_MarkupCompile.cache
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes_MarkupCompile.lref
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\bin\Debug\GraphicNotes.exe
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\bin\Debug\GraphicNotes.pdb
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.g.resources
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.Properties.Resources.resources
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.exe
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.pdb
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\Resources\BaseObject.baml
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\Resources\ResizeChrome.baml
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\App.baml
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.exe.licenses
+C:\Users\Omar\Documents\Visual Studio 2010\Projects\TT_Test1\TT_Test1\obj\x86\Debug\Resources\Toolbox.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\bin\Debug\GraphicNotes.exe
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\bin\Debug\GraphicNotes.pdb
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Languages\StringResources.es-MX.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Languages\StringResources.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\App.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\App.g.cs
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes_MarkupCompile.cache
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes_MarkupCompile.lref
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Collections\ToolboxCollection.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\MainWindow.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Resources\BaseObject.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Resources\ObjectBar.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Resources\ResizeChrome.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Resources\TextObject.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Resources\Toolbox.baml
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.g.resources
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.Properties.Resources.resources
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.exe.licenses
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.exe
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\GraphicNotes.pdb
+C:\Users\Omar\Dropbox\Pasatiempos\TT_Test1\TT_Test1\obj\x86\Debug\Resources\DocumentPanel.baml
+C:\Users\Omar\Documents\GitHub\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.exe
+C:\Users\Omar\Documents\GitHub\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.pdb
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.exe
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.pdb
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\bin\Debug\GraphicNotes.exe
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\bin\Debug\GraphicNotes.pdb
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.csprojResolveAssemblyReference.cache
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Languages\StringResources.es-MX.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Languages\StringResources.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\App.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\App.g.cs
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes_MarkupCompile.cache
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes_MarkupCompile.lref
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Collections\ToolboxCollection.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\MainWindow.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\BaseObject.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\DocumentPanel.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\ObjectBar.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\ResizeChrome.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\TextObject.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\Toolbox.baml
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.g.resources
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.Properties.Resources.resources
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.csproj.GenerateResource.Cache
+C:\Users\Omar\Desktop\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.exe.licenses
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.exe
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.pdb
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\bin\Debug\GraphicNotes.exe
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\bin\Debug\GraphicNotes.pdb
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.csprojResolveAssemblyReference.cache
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Languages\StringResources.es-MX.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Languages\StringResources.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\App.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\App.g.cs
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes_MarkupCompile.cache
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes_MarkupCompile.lref
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Collections\ToolboxCollection.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\MainWindow.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\BaseObject.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\DocumentPanel.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\ObjectBar.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\ResizeChrome.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\TextObject.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\Resources\Toolbox.baml
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.g.resources
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.Properties.Resources.resources
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.csproj.GenerateResource.Cache
+C:\Users\Omar\Documents\GitHub\TT_2012b-049_ComputerGraphics\Trabajo_Terminal\Trabajo_Terminal\obj\x86\Debug\GraphicNotes.exe.licenses

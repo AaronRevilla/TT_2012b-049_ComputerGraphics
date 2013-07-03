@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="Figure3D">Figura3D</system:String>
+    <system:String x:Key="Line">Linea</system:String>
+    <system:String x:Key="Picture">Imagen</system:String>
+    <system:String x:Key="Plot">Plot</system:String>
+    <system:String x:Key="Polygon">Poligono</system:String>
+    <system:String x:Key="Table">Tabla</system:String>
+    <system:String x:Key="Text">Texto</system:String>
+    <system:String x:Key="Video">Video</system:String>
+
+</ResourceDictionary>

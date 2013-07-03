@@ -1,0 +1,5 @@
+DevExpress.Xpf.Bars.BarManager, DevExpress.Xpf.Core.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Ribbon.RibbonControl, DevExpress.Xpf.Ribbon.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Xpf.Ribbon.RibbonStatusBarControl, DevExpress.Xpf.Ribbon.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Registration.LicenseHelper, DevExpress.Registration, Version=12.2.4.0, Culture=neutral, PublicKeyToken=940cfcde86f32efd
+DevExpress.Xpf.Docking.DockLayoutManager, DevExpress.Xpf.Docking.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
