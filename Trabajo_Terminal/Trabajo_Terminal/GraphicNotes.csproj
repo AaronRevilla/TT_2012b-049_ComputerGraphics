@@ -77,6 +77,7 @@
     <Compile Include="Adorners\ResizeDecorator.cs" />
     <Compile Include="Adorners\ResizeThumb.cs" />
     <Compile Include="Adorners\RubberbandAdorner.cs" />
+    <Compile Include="Borrar.cs" />
     <Compile Include="DocumentContainer.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Objects\Views\BaseObject.cs" />
