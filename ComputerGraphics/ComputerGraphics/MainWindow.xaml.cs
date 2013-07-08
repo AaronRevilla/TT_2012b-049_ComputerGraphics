@@ -398,9 +398,9 @@ namespace ComputerGraphics
                 }
                 else
                 {
-                    Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = this.Consola.Text + "No entro" + '\n'));
+                  //  Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = this.Consola.Text + "No entro" + '\n'));
                 }
-                Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Progreso.Value = (indiceLinea * 100) / numCaras));
+             //   Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Progreso.Value = (indiceLinea * 100) / numCaras));
             }
             model = new ModelVisual3D();
             model.Content = caras;
@@ -426,6 +426,11 @@ namespace ComputerGraphics
                 this.mainViewport.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal,
         new Action(delegate() { this.mainViewport.Children.Add(visualModel); })); //update GUI from this thread
             }
+        }
+
+        private void blenderButton_Click(object sender, RoutedEventArgs e)
+        {
+            graficaBlender();
         }
 
     }
