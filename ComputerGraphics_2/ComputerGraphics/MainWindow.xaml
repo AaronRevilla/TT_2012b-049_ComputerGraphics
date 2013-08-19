@@ -1,0 +1,43 @@
+﻿<Window x:Class="ComputerGraphics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ob ="clr-namespace:ComputerGraphics"
+        Title="MainWindow" Height="556" Width="665">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="213*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan="2" HorizontalAlignment="Left" Width="98">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF9B2424" Offset="0"/>
+                    <GradientStop Color="#FFEC1919" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <RadioButton Name="rb1" Content="Punto 1" IsChecked="True" GroupName="puntos"/>
+            <Label Content="X:"/>
+            <TextBox Name="p0x" Height="23" TextWrapping="Wrap" ></TextBox>
+            <Label Content="Y:"/>
+            <TextBox Name="p0y" Height="23" TextWrapping="Wrap" />
+            <RadioButton Name="rb2" Content="Punto 2" GroupName="puntos" IsChecked="False"/>
+            <Label Content="X:"/>
+            <TextBox Name="p1x" Height="23" TextWrapping="Wrap" />
+            <Label Content="Y:"/>
+            <TextBox Name="p1y" Height="23" TextWrapping="Wrap" />
+            <Button Content="Dibuja" Click="Button_Click"/>
+            <Label Content="Width" HorizontalAlignment="Right" Width="98"/>
+            <TextBox Name="width" Height="23" TextWrapping="Wrap"></TextBox>
+            <Label Content="Height" HorizontalAlignment="Right" Width="98"/>
+            <TextBox Name="Height" Height="23" TextWrapping="Wrap"></TextBox>
+            
+
+        </StackPanel>
+       
+        <ob:MyCanvas x:Name="canvasDraw" MouseLeftButtonUp="onClick" MouseLeftButtonDown="Canvas_MouseLeftButtonDown_1" Background="#FFC1C1C1" Grid.RowSpan="2" Margin="98,0,0,0" SizeChanged="canvasDraw_SizeChanged">
+         
+        </ob:MyCanvas>
+
+    </Grid>
+</Window>
