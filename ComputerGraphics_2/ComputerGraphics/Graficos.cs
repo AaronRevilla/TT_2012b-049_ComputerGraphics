@@ -417,17 +417,19 @@ namespace ComputerGraphics
                 points.AddLast(p1);
                 return points;
             }
-            /////////////////////////////////////////////////////////////obtener su magnitud
-            if (longx < 0)
-            {
-                longx = longx * -1;
-            }
-            if (longy < 0)
-            {
-                longy = longy * -1;
-            }
-            ////////////////////////////////////////////////////////////////////////////////
-
+			////////////////////////////////////////////////////////
+			//////////////////obtener magnitud//////////////////////
+			////////////////////////////////////////////////////////
+			if (longx < 0)
+			{
+				longx = longx * -1;
+			}
+				if (longy < 0)
+			{
+				longy = longy * -1;
+			}
+			////////////////////////////////////////////////////////
+			////////////////////////////////////////////////////////
             if (longx >= longy)
             {
                 ///////////////////////////////////////////////
@@ -435,7 +437,8 @@ namespace ComputerGraphics
                 ///////////////////////////////////////////////
                 if (xf < xi)
                 {
-                    aux_x = xf;
+                    //Se invierten los puntos//
+					aux_x = xf;
                     aux_y = yf;
                     xf = xi;
                     yf = yi;
@@ -448,13 +451,13 @@ namespace ComputerGraphics
                     }
                 }
                 ////////////////////////////////////////////////////////////////////////////////
-                x = (float)xi;
-                b = ((float)yi) - (m * x);
+                x	= (float)xi;
+                b	= ((float)yi) - (m * x);
                 len = longx;
                 ///////////////////////////////////////////////////////////////////algoritmo dda
 
                 y1 = (m * x) + b;
-                points.AddLast(new Point3D(xi, round(yi), 0));
+                points.AddLast(new Point3D(x, round(y1), 0));
                 //*(raster + (((rounD(y1)) * c) + ((int)x))) = 1;
                 aux_y1 = y1;
 
@@ -462,7 +465,7 @@ namespace ComputerGraphics
                 {
                     x = x + 1;
                     y1 = aux_y1 + m;//incremento en y
-                    points.AddLast(new Point3D(xi, round(yi) + 1, 0));
+                    points.AddLast(new Point3D(x, round(y1) + 1, 0));
                     //*(raster + (((rounding(y1) + 1) * c) + ((int)x))) = 1;
                     aux_y1 = y1;
                 }
@@ -499,16 +502,16 @@ namespace ComputerGraphics
                 ///////////////////////////////////////////////////////////algoritmo dda swaping
 
                 y1 = (m * y) + b;// y1 = x
-                points.AddLast(new Point3D(y1, y, 0));
-                //*(raster + (((((int)y) * c) + (round(y1))))) = 1;
+                points.AddLast(new Point3D(round(y1), round(y), 0));
+                //*(raster+(((((int)y)* c) + (rounding(y1))))) = 1;
                 aux_y1 = y1;
 
                 for (i = 0; i < len; i++)
                 {
                     y = y + 1;
                     y1 = aux_y1 + m;  //incremento en y
-                    points.AddLast(new Point3D(round(y1), y, 0));
-                    //*(raster + (((((int)y) * c) + (rounD(y1))))) = 1;
+                    points.AddLast(new Point3D(round(y1), round(y), 0));
+                    //*(raster+(((((int)y)* c) + (rounding(y1))))) = 1;
                     aux_y1 = y1;
                 }
             }
