@@ -24,7 +24,7 @@ namespace ComputerGraphics
     {
         ModelVisual3D model;
         Graficos graficos;
-        Point3D[] puntos = new Point3D[8];
+        Point3D[] puntos ;
         Thread hiloBlender = null;
         int x, y, z;
 
@@ -65,7 +65,7 @@ namespace ComputerGraphics
         private void cubeButtonClick(object sender, RoutedEventArgs e)
         {
             //Model3DGroup cube = new Model3DGroup();
-
+            puntos = new Point3D[8];
             puntos[0] = new Point3D(0, 0, 0);
             puntos[1] = new Point3D(5, 0, 0);
             puntos[2] = new Point3D(5, 0, 5);
@@ -241,9 +241,7 @@ namespace ComputerGraphics
                 if (model != null)
                     this.mainViewport.Children.Add(model);
             }
-            if (e.Key == Key.K) { 
             
-            }
             if (e.Key == Key.K)
             {
                 Point3D prota = new Point3D();
@@ -395,12 +393,9 @@ namespace ComputerGraphics
                         //Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = Consola.Text = this.Consola.Text + " X=" + puntosArchvivo[indicePunto].X + " Y=" + puntosArchvivo[indicePunto].Y + " Z=" + puntosArchvivo[indicePunto].Z + '\n'));
                     }
                     caras.Children.Add(graficos.CreatePolygonModel(puntosArchvivo));
+                    puntos = puntosArchvivo;
                 }
-                else
-                {
-                    Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Consola.Text = this.Consola.Text + "No entro" + '\n'));
-                }
-                Dispatcher.Invoke(DispatcherPriority.Normal, new Action(() => this.Progreso.Value = (indiceLinea * 100) / numCaras));
+                
             }
             model = new ModelVisual3D();
             model.Content = caras;
@@ -426,6 +421,11 @@ namespace ComputerGraphics
                 this.mainViewport.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal,
         new Action(delegate() { this.mainViewport.Children.Add(visualModel); })); //update GUI from this thread
             }
+        }
+
+        private void blenderButton_Click(object sender, RoutedEventArgs e)
+        {
+            graficaBlender();
         }
 
     }

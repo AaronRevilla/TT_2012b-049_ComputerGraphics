@@ -110,6 +110,90 @@ namespace ComputerGraphics
             return camera;
         }
 
+        public Point3D[] rotateModel(Point3D[] puntos, double angle,String axis) {
+            Point3D aux = new Point3D();
+            Point3D[] rotados;
+            switch(axis){
+                case "x":
+                    for (int i = 0; i < puntos.Length; i++)
+                    {
+                        aux.Y = (puntos[i].Y) * (Math.Cos((angle * Math.PI) / 180)) - (puntos[i].Z) * (Math.Sin((angle * Math.PI) / 180));
+                        aux.Z = (puntos[i].Y) * (Math.Sin((angle * Math.PI) / 180)) + (puntos[i].Z) * (Math.Cos((angle * Math.PI) / 180));
+                        aux.X = puntos[i].X;
 
+                        puntos[i].X = aux.X;
+                        puntos[i].Y = aux.Y;
+                        puntos[i].Z = aux.Z;
+                    }
+                    break;
+                case "y":
+                    for (int i = 0; i < puntos.Length; i++)
+                    {
+                        aux.Z = (puntos[i].Z) * (Math.Cos((angle* Math.PI) / 180)) - (puntos[i].X) * (Math.Sin((angle* Math.PI) / 180));
+                        aux.X = (puntos[i].Z) * (Math.Sin((angle * Math.PI) / 180)) + (puntos[i].X) * (Math.Cos((angle * Math.PI) / 180));
+                        aux.Y = puntos[i].Y;
+
+                        puntos[i].X = aux.X;
+                        puntos[i].Y = aux.Y;
+                        puntos[i].Z = aux.Z;
+                    }
+                    break;
+                case "z":
+                    for (int i = 0; i < puntos.Length; i++)
+                    {
+                        aux.X = (puntos[i].X) * (Math.Cos((angle * Math.PI) / 180)) - (puntos[i].Y) * (Math.Sin((angle * Math.PI) / 180));
+                        aux.Y = (puntos[i].X) * (Math.Sin((angle * Math.PI) / 180)) + (puntos[i].Y) * (Math.Cos((angle * Math.PI) / 180));
+                        aux.Z = puntos[i].Z;
+
+                        puntos[i].X = aux.X;
+                        puntos[i].Y = aux.Y;
+                        puntos[i].Z = aux.Z;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            rotados = puntos;
+            return rotados;
+        }
+
+        public Point3D[] transferMode(Point3D[] puntos, double delta, String axis) {
+            Point3D[] transfered;
+            switch(axis){
+                case "x":
+                    for (int i = 0; i < puntos.Length; i++) {
+                        puntos[i].X = puntos[i].X + delta;
+                    }
+                        break;
+                case "y":
+                        for (int i = 0; i < puntos.Length; i++)
+                        {
+                            puntos[i].Y = puntos[i].Y + delta;
+                        }
+                    break;
+                case "z":
+                    for (int i = 0; i < puntos.Length; i++)
+                    {
+                        puntos[i].Z = puntos[i].Z + delta;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            transfered = puntos;
+            return transfered;
+        }
+
+        public Point3D[] resizeModel(Point3D[] puntos, double scalar) {
+            Point3D[] resized;
+            for (int i = 0; i < puntos.Length;i++ )
+            {
+                puntos[i].X = puntos[i].X * (1.1);
+                puntos[i].Y = puntos[i].Y * (1.1);
+                puntos[i].Z = puntos[i].Z * (1.1);
+            }
+            resized = puntos;
+            return resized;
+        }
     }
 }
