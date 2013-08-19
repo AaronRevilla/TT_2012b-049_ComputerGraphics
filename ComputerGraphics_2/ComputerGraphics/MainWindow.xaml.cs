@@ -17,6 +17,7 @@ namespace ComputerGraphics
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool flagSecClick = false;
         
         public MainWindow()
         {
@@ -27,7 +28,6 @@ namespace ComputerGraphics
 
         private void onClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            
             Point p = e.GetPosition(canvasDraw);
             if (rb1.IsChecked==true)
             {
@@ -62,6 +62,16 @@ namespace ComputerGraphics
                     drawRectangle(x1 * dx, y1 * dy, dx, dy, Colors.Red);
                 }
             }
+
+            /*if (flagSecClick)
+            {
+                dibujaLinea();
+                flagSecClick = false;
+            }
+            else
+            {
+                flagSecClick = true;
+            }*/
             
         }
 
@@ -87,26 +97,32 @@ namespace ComputerGraphics
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            dibujaLinea();
+        }
+
+        public void dibujaLinea()
+        {
             //if (validaCampos()) {
-                int x0, x1, y0, y1;
-                x0 = (int)Double.Parse(p0x.Text);
-                x1 = (int)Double.Parse(p1x.Text);
-                y0 = (int)Double.Parse(p0y.Text);
-                y1 = (int)Double.Parse(p1y.Text);
-                Graficos g = new Graficos();
-                LinkedList<System.Windows.Media.Media3D.Point3D> puntos = new LinkedList<System.Windows.Media.Media3D.Point3D>();
-                
-                puntos=g.bresenham(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
-                for (int i = 0; i < puntos.Count;i++ ) {
-                    int x, y;
-                    double dx = canvasDraw.ActualWidth / 30;
-                    double dy = canvasDraw.ActualHeight / 30;
-                    x = (int)(puntos.ElementAt(i).X*dx);
-                    y = (int)(puntos.ElementAt(i).Y*dy);
-                    drawRectangle(x, y,dx,dy,Colors.SeaGreen);
-                }
-           // }*/
-           // drawPoint(35, 50);
+            int x0, x1, y0, y1;
+            x0 = (int)Double.Parse(p0x.Text);
+            x1 = (int)Double.Parse(p1x.Text);
+            y0 = (int)Double.Parse(p0y.Text);
+            y1 = (int)Double.Parse(p1y.Text);
+            Graficos g = new Graficos();
+            LinkedList<System.Windows.Media.Media3D.Point3D> puntos = new LinkedList<System.Windows.Media.Media3D.Point3D>();
+
+            puntos = g.dda(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
+            for (int i = 0; i < puntos.Count; i++)
+            {
+                int x, y;
+                double dx = canvasDraw.ActualWidth / 30;
+                double dy = canvasDraw.ActualHeight / 30;
+                x = (int)(puntos.ElementAt(i).X * dx);
+                y = (int)(puntos.ElementAt(i).Y * dy);
+                drawRectangle(x, y, dx, dy, Colors.SeaGreen);
+            }
+            // }*/
+            // drawPoint(35, 50);
         }
 
         private bool validaCampos() {
