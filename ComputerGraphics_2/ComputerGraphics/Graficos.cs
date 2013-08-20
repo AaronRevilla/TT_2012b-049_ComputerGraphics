@@ -372,7 +372,12 @@ namespace ComputerGraphics
             /////////////////////////////////////////////////////////////////////////////
             if (yi == yf)
             {
-                for (indicePunto = (xi - 1); indicePunto < xf; indicePunto++)
+                if (xi > xf) {
+                    aux_x = xi;
+                    xi = xf;
+                    xf = aux_x;
+                }
+                for (indicePunto = xi; indicePunto < xf; indicePunto++)
                 {
                     points.AddLast(new Point3D(indicePunto, yi, 0));
                 }
@@ -384,6 +389,12 @@ namespace ComputerGraphics
             /////////////////////////////////////////////////////////////////////////////
             else if (xi == xf)
             {
+                if (yi > yf)
+                {
+                    aux_y = yi;
+                    yi = yf;
+                    yf = aux_y;
+                }
                 for (indicePunto = yi; indicePunto < yf; indicePunto++)
                 {
                     points.AddLast(new Point3D(xi, indicePunto, 0));
@@ -396,24 +407,61 @@ namespace ComputerGraphics
             /////////////////////////////////////////////////////////////////////////////
             else if ((m == 1) || (m == -1))
             {
-                if (m == 1)
+                if (xi < xf)
                 {
-                    for (indicePunto = (xi - 1); indicePunto < xf; indicePunto++)
+                    /*aux_x = xi;
+                    xi = xf;
+                    xf = aux_x;
+                    aux_y = yi;
+                    yi = yf;
+                    yf = aux_y;*/
+                    if (yf < yi)
                     {
-                        points.AddLast(new Point3D(xi, yi, 0));
-                        xi++;
-                        yi++;
+                        for (indicePunto = xi; indicePunto < xf; indicePunto++)
+                        {
+                            points.AddLast(new Point3D(xi, yi, 0));
+                            xi--;
+                            yi--;
+                        }
+                    }
+                    else
+                    {
+                        for (indicePunto = xi; indicePunto < xf; indicePunto++)
+                        {
+                            points.AddLast(new Point3D(xi, yi, 0));
+                            xi--;
+                            yi++;
+                        }
                     }
                 }
                 else
                 {
-                    for (indicePunto = (xi - 1); indicePunto < xf; indicePunto++)
+                    if (yi < yf)
                     {
-                        points.AddLast(new Point3D(xi, yi, 0));
-                        xi++;
-                        yi--;
+                        for (indicePunto = xi; indicePunto < xf; indicePunto++)
+                        {
+                            points.AddLast(new Point3D(xi, yi, 0));
+                            xi++;
+                            yi++;
+                        }
+                    }
+                    else
+                    {
+                        for (indicePunto = xi; indicePunto < xf; indicePunto++)
+                        {
+                            points.AddLast(new Point3D(xi, yi, 0));
+                            xi++;
+                            yi--;
+                        }
                     }
                 }
+                
+                if (m == 1)
+                {
+                    
+                    
+                }
+                
                 points.AddLast(p1);
                 return points;
             }
