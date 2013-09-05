@@ -121,8 +121,33 @@ namespace ComputerGraphics
                 y = (int)(puntos.ElementAt(i).Y * dy);
                 drawRectangle(x, y, dx, dy, Colors.SeaGreen);
             }
+
+            drawLineCanvas(x0, y0, x1, y1);
+
             // }*/
             // drawPoint(35, 50);
+        }
+
+        public void drawLineCanvas(int x1, int y1, int x2, int y2) {
+            double dx = canvasDraw.ActualWidth / 30;
+            double dy = canvasDraw.ActualHeight / 30;
+
+            //MessageBox.Show(dx.ToString());
+            //MessageBox.Show(dy.ToString());
+
+            Line line = new Line();
+            Thickness thickness = new Thickness(101, -11, 362, 250);
+            line.Margin = thickness;
+            line.Visibility = System.Windows.Visibility.Visible;
+            line.StrokeThickness = 2;
+            line.Stroke = System.Windows.Media.Brushes.Salmon;
+            line.X1 = (int)(x1 * dx) -85;
+            line.Y1 = (int)(y1 * dy) +20;
+            line.X2 = (int)(x2 * dx) -85;
+            line.Y2 = (int)(y2 * dy) +20;
+            //MessageBox.Show(line.X1.ToString() +","+ line.Y1.ToString());
+            //MessageBox.Show(line.X2.ToString() + "," + line.Y2.ToString());
+            canvasDraw.Children.Add(line);
         }
 
         private bool validaCampos() {
