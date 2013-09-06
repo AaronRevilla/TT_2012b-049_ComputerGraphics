@@ -108,10 +108,23 @@ namespace ComputerGraphics
             x1 = (int)Double.Parse(p1x.Text);
             y0 = (int)Double.Parse(p0y.Text);
             y1 = (int)Double.Parse(p1y.Text);
-            Graficos g = new Graficos();
-            LinkedList<System.Windows.Media.Media3D.Point3D> puntos = new LinkedList<System.Windows.Media.Media3D.Point3D>();
+            Algoritmos.DibujarLinea g;
+            String OpAlgoritmo = OpAlgoritmos.Text;
 
-            puntos = g.dda(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
+            LinkedList<System.Windows.Media.Media3D.Point3D> puntos = new LinkedList<System.Windows.Media.Media3D.Point3D>();
+            if (OpAlgoritmo.CompareTo("Naive") == 0) 
+            {
+                puntos = Algoritmos.DibujarLinea.naiveLine(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
+            }
+            else if (OpAlgoritmo.CompareTo("Bresenham") == 0)
+            {
+                puntos = Algoritmos.DibujarLinea.bresenham(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
+            }
+            else if (OpAlgoritmo.CompareTo("DDA") == 0) 
+            {
+                puntos = Algoritmos.DibujarLinea.dda(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0)); 
+            }
+
             for (int i = 0; i < puntos.Count; i++)
             {
                 int x, y;
@@ -119,7 +132,18 @@ namespace ComputerGraphics
                 double dy = canvasDraw.ActualHeight / 30;
                 x = (int)(puntos.ElementAt(i).X * dx);
                 y = (int)(puntos.ElementAt(i).Y * dy);
-                drawRectangle(x, y, dx, dy, Colors.SeaGreen);
+                if (OpAlgoritmo.CompareTo("Naive") == 0)
+                {
+                    drawRectangle(x, y, dx, dy, Colors.AliceBlue);
+                }
+                else if (OpAlgoritmo.CompareTo("Bresenham") == 0)
+                {
+                    drawRectangle(x, y, dx, dy, Colors.BlueViolet);
+                }
+                else if (OpAlgoritmo.CompareTo("DDA") == 0)
+                {
+                    drawRectangle(x, y, dx, dy, Colors.SeaGreen);
+                }
             }
 
             drawLineCanvas(x0, y0, x1, y1);

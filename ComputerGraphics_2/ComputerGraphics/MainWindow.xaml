@@ -31,14 +31,21 @@
             <TextBox Name="width" Height="23" TextWrapping="Wrap"></TextBox>
             <Label Content="Height" HorizontalAlignment="Right" Width="98"/>
             <TextBox Name="Height" Height="23" TextWrapping="Wrap"></TextBox>
-            
+            <Label Content="Algoritmos" HorizontalAlignment="Right" Width="98"/>
+            <ComboBox Name="OpAlgoritmos" IsEditable="False">
+                <ComboBoxItem Content="Naive" IsSelected="True"></ComboBoxItem>
+                <ComboBoxItem Content="Bresenham"></ComboBoxItem>
+                <ComboBoxItem Content="DDA"></ComboBoxItem>
+            </ComboBox>
+
 
         </StackPanel>
-       
+
         <ob:MyCanvas x:Name="canvasDraw" MouseLeftButtonUp="onClick" MouseLeftButtonDown="Canvas_MouseLeftButtonDown_1" Background="#FFD3D1D1" Grid.RowSpan="2" Margin="98,0,0,0" SizeChanged="canvasDraw_SizeChanged">
-           
+
         </ob:MyCanvas>
-        <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="665,0,-204,0" VerticalAlignment="Top" Width="199" Height="525" Grid.RowSpan="2"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="267,-570,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="665,0,-203,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="525" Grid.RowSpan="2" Width="198" SizeChanged="canvasDraw_SizeChanged"/>
 
     </Grid>
 </Window>
