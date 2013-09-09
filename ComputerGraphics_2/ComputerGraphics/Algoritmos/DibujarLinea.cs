@@ -4,22 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Windows.Media.Media3D;
 using System.Windows.Media;
+using System.Windows.Controls;
 
 namespace ComputerGraphics.Algoritmos
 {
     class DibujarLinea
     {
-        public static LinkedList<Point3D> bresenham(Point3D p0, Point3D p1)
+        public static LinkedList<Point3D> bresenham(Point3D p0, Point3D p1, TextBlock areaResumen, TextBlock areaInformacion)
         {
-            int x, y, dx, dy, p, incE, incNE, x0, y0, x1, y1, stepx, stepy;
+            /*
+             *  Constantes para el algoritmo Bresenham
+             * 
+             *  dx
+             *  dy
+             *  m = dy/dx
+             *  2dy
+             *  2(dy - dx)
+             *  k=0
+             *  p[k] = (x[k],y[k])
+             *  
+             */
+            int x, y, dx, dy, p, incE, incNE, x0, y0, x1, y1, stepx, stepy, indicePuntos;
             LinkedList<Point3D> puntos = new LinkedList<Point3D>();
             x0 = (int)(p0.X);
             x1 = (int)(p1.X);
             y0 = (int)(p0.Y);
             y1 = (int)(p1.Y);
 
-            dy = (y1 - y0);
-            dx = (x1 - x0);
+            dy = (y1 - y0);             //constante
+            dx = (x1 - x0);             //constante
+
+            areaInformacion.Text = "dx = " + dx + "\n";
+            areaInformacion.Text = areaInformacion.Text + "dy = " + dy + "\n";
+            areaInformacion.Text = areaInformacion.Text + "m = " + (dy/dx) + "\n";
 
             if (dy < 0)
             {
@@ -41,65 +58,102 @@ namespace ComputerGraphics.Algoritmos
             }
             x = x0;
             y = y0;
+
             puntos.AddLast(new Point3D(x0, y0, 0));
+            indicePuntos = 1;
             if (dx > dy)
             {
-                p = 2 * dy - dx;
-                incE = 2 * dy;
-                incNE = 2 * (dy - dx);
+                p = 2 * dy - dx;        //constantes P[0]
+                incE = 2 * dy;          //constante 
+                incNE = 2 * (dy - dx);  //constante
+
+                areaInformacion.Text = areaInformacion.Text + "2dy = " + incE + "\n";
+                areaInformacion.Text = areaInformacion.Text + "2(dy - dx) = " + incNE + "\n";
+
+                areaResumen.Text = indicePuntos + ".-   ( " + x + ", " + y + ") p= " + p + "\n";
                 while (x != x1)
                 {
                     x = x + stepx;
                     if (p < 0)
                     {
-                        p = p + incE;
+                        p = p + incE;   //P[k+1]
                     }
                     else
                     {
                         y = y + stepy;
-                        p = p + incNE;
+                        p = p + incNE; //P[k+1]
                     }
                     puntos.AddLast(new Point3D(x, y, 0));
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + x + ", " + y + ") p = " + p + "\n";
                 }
             }
             else
             {
-                p = 2 * dx - dy;
-                incE = 2 * dx;
-                incNE = 2 * (dx - dy);
+                p = 2 * dx - dy;        //constante P0
+                incE = 2 * dx;          //constante
+                incNE = 2 * (dx - dy);  //constante
+
+                areaInformacion.Text = areaInformacion.Text + "2dy = " + incE + "\n";
+                areaInformacion.Text = areaInformacion.Text + "2(dy - dx) = " + incNE + "\n";
+
+                areaResumen.Text = indicePuntos + ".-   ( " + x + ", " + y + ") p = " + p + "\n";
                 while (y != y1)
                 {
                     y = y + stepy;
                     if (p < 0)
                     {
-                        p = p + incE;
+                        p = p + incE;   //P[k+1]
                     }
                     else
                     {
-                        x = x + stepx;
-                        p = p + incNE;
+                        x = x + stepx;  
+                        p = p + incNE;  //P[k+1]
                     }
                     puntos.AddLast(new Point3D(x, y, 0));
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + x + ", " + y + ") p= " + p + "\n";
                 }
             }
             return puntos;
         }
 
-        public static LinkedList<Point3D> naiveLine(Point3D p0, Point3D p1)
+        public static LinkedList<Point3D> naiveLine(Point3D p0, Point3D p1, TextBlock areaResumen, TextBlock areaInformacion)
         {
+            /*
+             *  Constantes para el algoritmo Naive
+             *
+             *  dx
+             *  dy
+             *  m = dy/dx
+             *  b 
+             *  y(real)
+             *  k=0
+             *  p[k] = (x[k],y[k])
+             *  
+             */
             LinkedList<Point3D> points = new LinkedList<Point3D>();
             int x0 = (int)p0.X;
             int y0 = (int)p0.Y;
             int x1 = (int)p1.X;
             int y1 = (int)p1.Y;
 
-            int dx = x1 - x0;
-            int dy = y1 - y0;
+            int dx = x1 - x0;       //constante
+            int dy = y1 - y0;       //constante
+
+            int indicePuntos = 1;
+
+            areaInformacion.Text = "dx = " + dx + "\n";
+            areaInformacion.Text = areaInformacion.Text + "dy = " + dy + "\n";
+
             points.AddLast(p0);
             if (Math.Abs(dx) > Math.Abs(dy))
             {
-                float m = (float)(dy) / (float)(dx);
-                float b = y0 - m * x0;
+                float m = (float)(dy) / (float)(dx);    //constante
+                float b = y0 - m * x0;                  //constante
+
+                areaInformacion.Text = areaInformacion.Text + "m = " + m + "\n";
+                areaInformacion.Text = areaInformacion.Text + "b = " + b + "\n";
+                areaResumen.Text = indicePuntos + ".-   ( " + x0 + ", " + y0 + ") y(real) = " + y0 + "\n";
+
                 if (dx < 0)
                     dx = -1;
                 else
@@ -107,16 +161,22 @@ namespace ComputerGraphics.Algoritmos
                 while (x0 != x1)
                 {
                     x0 += dx;
-                    y0 = round(m * x0 + b);
-                    points.AddLast(new Point3D(x0, y0, 0));
+                    y0 = round(m * x0 + b);             //constante
+                    points.AddLast(new Point3D(x0, y0, 0)); //add new 'x' and 'y'
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + x0 + ", " + y0 + ") y(real) = " + y0 + "\n";
                 }
             }
             else
             {
                 if (dy != 0)
                 {
-                    float m = (float)(dx) / (float)(dy);
-                    float b = x0 - m * y0;
+                    float m = (float)(dx) / (float)(dy);    //constante
+                    float b = x0 - m * y0;                  //constante
+
+                    areaInformacion.Text = areaInformacion.Text + "m = " + m + "\n";
+                    areaInformacion.Text = areaInformacion.Text + "b = " + b + "\n";
+                    areaResumen.Text = indicePuntos + ".-   ( " + x0 + ", " + y0 + ") y(real) = " + y0 + "\n";
+
                     if (dy < 0)
                         dy = -1;
                     else
@@ -124,8 +184,9 @@ namespace ComputerGraphics.Algoritmos
                     while (y0 != y1)
                     {
                         y0 += dy;
-                        x0 = round(m * y0 + b);
-                        points.AddLast(new Point3D(x0, y0, 0));
+                        x0 = round(m * y0 + b);             //constante
+                        points.AddLast(new Point3D(x0, y0, 0)); //add new 'x' and 'y'
+                        areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + x0 + ", " + y0 + ") y(real) = " + y0 + "\n";
                     }
                 }
             }
@@ -133,8 +194,17 @@ namespace ComputerGraphics.Algoritmos
             return points;
         }
 
-        public static LinkedList<Point3D> dda(Point3D p0, Point3D p1)
+        public static LinkedList<Point3D> dda(Point3D p0, Point3D p1, TextBlock areaResumen, TextBlock areaInformacion)
         {
+            /*
+             *  Constantes para el algoritmo DDA
+             *  dx
+             *  dy
+             *  m= dx/dy
+             *  k=0
+             *  x[k] =  x[k-1] + (1/m)
+             *  y[k] =  y[k-1] + m
+             */
             LinkedList<Point3D> points = new LinkedList<Point3D>();
             points.AddLast(p0);
 
@@ -151,6 +221,7 @@ namespace ComputerGraphics.Algoritmos
             int aux_x = 0;
             int aux_y = 0;
             int i = 0;
+            int indicePuntos = 0;
             int y = 0;
 
             float x = 0;
@@ -162,7 +233,12 @@ namespace ComputerGraphics.Algoritmos
             longx = xf - xi;
             longy = yf - yi;
 
-            m = (((float)yf - (float)yi) / ((float)xf - (float)xi));
+            m = (((float)yf - (float)yi) / ((float)xf - (float)xi));                     //constante
+
+            areaInformacion.Text = "dx = " + longx + "\n";
+            areaInformacion.Text = areaInformacion.Text + "dy = " + longy + "\n";
+            areaInformacion.Text = areaInformacion.Text + "m = " + m + "\n";
+            areaResumen.Text = (++indicePuntos) + ".-   ( " + xi + ", " + yi + ") y(real) = " + aux_y1 + "\n";
 
             /////////////////////////////////////////////////////////////////////////////
             //////CASO BASE LINEA HORIZONTAL/////////////////////////////////////////////
@@ -178,8 +254,10 @@ namespace ComputerGraphics.Algoritmos
                 for (indicePunto = xi; indicePunto < xf; indicePunto++)
                 {
                     points.AddLast(new Point3D(indicePunto, yi, 0));
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + indicePunto + ", " + yi + ") y(real) = " + aux_y1 + "\n";
                 }
                 points.AddLast(p1);
+                areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xf + ", " + yf + ") y(real) = " + aux_y1 + "\n";
                 return points;
             }
             /////////////////////////////////////////////////////////////////////////////
@@ -196,8 +274,10 @@ namespace ComputerGraphics.Algoritmos
                 for (indicePunto = yi; indicePunto < yf; indicePunto++)
                 {
                     points.AddLast(new Point3D(xi, indicePunto, 0));
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xi + ", " + indicePunto + ") y(real) = " + aux_y1 + "\n";
                 }
                 points.AddLast(p1);
+                areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xf + ", " + yf + ") y(real) = " + aux_y1 + "\n";
                 return points;
             }
             /////////////////////////////////////////////////////////////////////////////
@@ -222,6 +302,7 @@ namespace ComputerGraphics.Algoritmos
                         points.AddLast(new Point3D(xi, yi, 0));
                         xi++;
                         yi++;
+                        areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xi + ", " + yi + ") y(real) = " + aux_y1 + "\n";
                     }
                 }
                 else
@@ -231,9 +312,11 @@ namespace ComputerGraphics.Algoritmos
                         points.AddLast(new Point3D(xi, yi, 0));
                         xi++;
                         yi--;
+                        areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xi + ", " + yi + ") y(real) = " + aux_y1 + "\n";
                     }
                 }
                 points.AddLast(p1);
+                areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xf + ", " + yf + ") y(real) = " + aux_y1 + "\n";
                 return points;
             }
             ////////////////////////////////////////////////////////
@@ -249,6 +332,7 @@ namespace ComputerGraphics.Algoritmos
             }
             ////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////
+
             if (longx >= longy)
             {
                 ///////////////////////////////////////////////
@@ -273,19 +357,21 @@ namespace ComputerGraphics.Algoritmos
                 x = (float)xi;
                 b = ((float)yi) - (m * x);
                 len = longx;
+
+                areaInformacion.Text = areaInformacion.Text + "b = " + b + "\n";
                 ///////////////////////////////////////////////////////////////////algoritmo dda
 
                 y1 = (m * x) + b;
                 points.AddLast(new Point3D(x, round(y1), 0));
-                //*(raster + (((rounD(y1)) * c) + ((int)x))) = 1;
                 aux_y1 = y1;
+                areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + x + ", " + round(y1) + ") y(real) = "+ aux_y1 +"\n";
 
                 for (i = 0; i < len; i++)
                 {
                     x = x + 1;
-                    y1 = aux_y1 + m;//incremento en y
+                    y1 = aux_y1 + m;    //incremento en y
                     points.AddLast(new Point3D(x, round(y1) + 1, 0));
-                    //*(raster + (((rounding(y1) + 1) * c) + ((int)x))) = 1;
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + x + ", " + round(y1) + ") y(real) = " + aux_y1 + "\n";
                     aux_y1 = y1;
                 }
 
@@ -318,23 +404,25 @@ namespace ComputerGraphics.Algoritmos
                 y = yi;//(float)yi
                 len = yf - yi;
 
+                areaInformacion.Text = areaInformacion.Text + "b = " + b + "\n";
                 ///////////////////////////////////////////////////////////algoritmo dda swaping
 
                 y1 = (m * y) + b;// y1 = x
                 points.AddLast(new Point3D(round(y1), round(y), 0));
-                //*(raster+(((((int)y)* c) + (rounding(y1))))) = 1;
                 aux_y1 = y1;
+                areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + round(y1) + ", " + round(y) +") y(real) = " + aux_y1 + "\n";
 
                 for (i = 0; i < len; i++)
                 {
                     y = y + 1;
                     y1 = aux_y1 + m;  //incremento en y
                     points.AddLast(new Point3D(round(y1), round(y), 0));
-                    //*(raster+(((((int)y)* c) + (rounding(y1))))) = 1;
+                    areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + round(y1) + ", " + round(y) + ") y(real) = " + aux_y1 + "\n";
                     aux_y1 = y1;
                 }
             }
             points.AddLast(p1);
+            areaResumen.Text = areaResumen.Text + (++indicePuntos) + ".-   ( " + xf + ", " + yf + ") y(real) = " + aux_y1 + "\n";
             return points;
         }
 

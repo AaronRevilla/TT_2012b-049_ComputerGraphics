@@ -87,7 +87,7 @@ namespace ComputerGraphics
                 mesh.Positions.Add(points.ElementAt(indexPoints));
             }
 
-            //Solo se necesitan tres puntos para poder saber la cara del triangulo
+            //Solo se necesitan tres puntos para poder obtener la normal del triangulo
             for (int i = 0; i < 3; i++)
             {
                 mesh.TriangleIndices.Add(i);

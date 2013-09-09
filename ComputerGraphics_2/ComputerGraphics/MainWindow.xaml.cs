@@ -114,15 +114,21 @@ namespace ComputerGraphics
             LinkedList<System.Windows.Media.Media3D.Point3D> puntos = new LinkedList<System.Windows.Media.Media3D.Point3D>();
             if (OpAlgoritmo.CompareTo("Naive") == 0) 
             {
-                puntos = Algoritmos.DibujarLinea.naiveLine(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
+                areaResumen.Text = "Algoritmo Naive";
+                areaInformacion.Text = "Algoritmo Naive";
+                puntos = Algoritmos.DibujarLinea.naiveLine(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0), areaResumen, areaInformacion);
             }
             else if (OpAlgoritmo.CompareTo("Bresenham") == 0)
             {
-                puntos = Algoritmos.DibujarLinea.bresenham(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0));
+                areaResumen.Text = "Algoritmo Bresenham";
+                areaInformacion.Text = "Algoritmo Bresenham";
+                puntos = Algoritmos.DibujarLinea.bresenham(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0), areaResumen, areaInformacion);
             }
             else if (OpAlgoritmo.CompareTo("DDA") == 0) 
             {
-                puntos = Algoritmos.DibujarLinea.dda(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0)); 
+                areaResumen.Text = "Algoritmo DDA";
+                areaInformacion.Text = "Algoritmo DDA";
+                puntos = Algoritmos.DibujarLinea.dda(new System.Windows.Media.Media3D.Point3D(x0, y0, 0), new System.Windows.Media.Media3D.Point3D(x1, y1, 0), areaResumen, areaInformacion); 
             }
 
             for (int i = 0; i < puntos.Count; i++)
